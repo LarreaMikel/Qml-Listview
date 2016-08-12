@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Qml-Listview
+Exec=qmlscene %U Qml-Listview/Main.qml
+Icon=Qml-Listview/Qml-Listview.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+

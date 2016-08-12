@@ -1,0 +1,17 @@
+{
+    "name": "qml-listview.larreamikel",
+    "description": "description of Qml-Listview",
+    "architecture": "@CLICK_ARCH@",
+    "title": "Qml-Listview",
+    "hooks": {
+        "Qml-Listview": {
+            "apparmor": "Qml-Listview/Qml-Listview.apparmor",
+            "desktop":  "Qml-Listview/Qml-Listview.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "Mikel Larrea <developer@larreamikel.com>",
+    "framework" : "ubuntu-sdk-15.04.6"
+}
+
+
