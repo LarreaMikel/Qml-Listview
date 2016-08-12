@@ -36,7 +36,7 @@ MainView {
                             topMargin: units.gu(2)
                         }
             Component {
-                id: contactDelegate
+                id: contactDelegate //Delegate that defines how the data should be displayed.
                 Item {
                     width: units.gu(50)
                     height: contactInfo2.height
@@ -52,6 +52,7 @@ MainView {
                 anchors.fill: parent
                 orientation: Qt.Vertical //Qt.Horizontal
                 layoutDirection: Qt.LeftToRight //Qt.RightToLeft
+                verticalLayoutDirection: ListView.TopToBottom //ListView.BottomToTop
 
                 model: ContactModel {}
                 delegate: contactDelegate
