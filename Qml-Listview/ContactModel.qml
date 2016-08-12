@@ -13,4 +13,8 @@ ListModel {
         name: "Sam Wise"
         number: "555 0473"
     }
+    ListElement {
+        name: "Sam Sagaz"
+        number: "556 0543"
+    }
 }

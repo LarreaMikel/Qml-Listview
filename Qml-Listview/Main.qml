@@ -26,34 +26,10 @@ MainView {
             }
         }
 
-//        Label {
-//            id: label
-//            objectName: "label"
-//            anchors {
-//                horizontalCenter: parent.horizontalCenter
-//                top: pageHeader.bottom
-//                topMargin: units.gu(2)
-//            }
-
-//            text: i18n.tr("Hello..")
-//        }
-
-//        Button {
-//            objectName: "button"
-//            anchors {
-//                horizontalCenter: parent.horizontalCenter
-//                top: label.bottom
-//                topMargin: units.gu(2)
-//            }
-//            width: parent.width
-//            text: i18n.tr("Tap me!")
-//            onClicked: {
-//                label.text = i18n.tr("..world!")
-//            }
-//        }
-
         Rectangle {
-            width: 180; height: 200
+            id: rectangulo
+            width: units.gu(50)
+            height: units.gu(60)
             anchors {
                             horizontalCenter: parent.horizontalCenter
                             top: pageHeader.bottom
@@ -62,21 +38,55 @@ MainView {
             Component {
                 id: contactDelegate
                 Item {
-                    width: 180; height: 40
+                    width: units.gu(50)
+                    height: contactInfo2.height
                     Column {
+                        id: contactInfo2
                         Text { text: '<b>Name:</b> ' + name }
                         Text { text: '<b>Number:</b> ' + number }
                     }
                 }
             }
             ListView {
+                id:lista1
                 anchors.fill: parent
+                orientation: Qt.Vertical //Qt.Horizontal
+                layoutDirection: Qt.LeftToRight //Qt.RightToLeft
+
                 model: ContactModel {}
                 delegate: contactDelegate
                 highlight: Rectangle { color: "lightsteelblue"; radius: 5 }
                 focus: true
             }
+
+
+//            ListView {
+//                id:lista2
+//                width: units.gu(50)
+//                height: units.gu(30)
+//                anchors.fill: lista1.bottom
+//                Component {
+//                    id: contactsDelegate
+//                    Rectangle {
+//                        id: wrapper
+//                        width: units.gu(50)
+//                        height: contactInfo.height
+//                        color: ListView.isCurrentItem ? "black" : "red"
+//                        Text {
+//                            id: contactInfo
+//                            text: name + ": " + number
+//                            color: wrapper.ListView.isCurrentItem ? "red" : "black"
+//                        }
+//                    }
+//                }
+//                model: ContactModel {}
+//                delegate: contactsDelegate
+//                focus: true
+//            }
+
         }
+
+
 
 
     }
